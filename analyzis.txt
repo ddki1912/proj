@@ -1,0 +1,60 @@
+1. header/navigation
+    - Home
+        + a quote about Books
+    - Admin 
+        + add librarian
+        + edit librarian
+        + delete librarian
+    - Librarian
+        + Books
+            . add Books
+            . edit Books
+            . delete Books
+        + Reader
+            . add Reader
+            . edit Reader
+            . delete Reader
+2. body
+    - Admin
+        + add
+            . ID librarian
+            . Name librarian
+            . Date of birth
+            . Phone
+            . Email
+        + edit
+            . Input ID of librarian
+            . Can changable
+                - Name librarian
+                - Phone
+                - Email
+                - Password
+        + delete
+    -Librarian
+        + Reader
+            . add
+                - ID
+                - Name
+                - DOB
+                - Email 
+                - Phone
+            . edit
+                - Name of book borrowed
+                - Date of borrowed
+                - Date of return
+            . delete
+        + Books
+            . add
+                - ID
+                - Name
+                - Type
+                - Numbers of Books
+            . edit
+                - Numbers of Books
+            . delete
+                - Numbers of Books
+
+3. footer
+    - Copyright
+    - Contact for our help (fb, linkedin, email, Phone)
+        
