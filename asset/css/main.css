@@ -1,0 +1,130 @@
+
+#header{
+    position: fixed;
+    z-index: 1;
+}
+/* Navigation at begin */
+.nav-bar{
+    display: flex;
+    background-color: #000;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.nav-bar .nav-bar__logo{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    display: block;
+    margin: 0 48px 0 56px;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nav-bar .nav-bar__start{
+    width: 250px;
+}
+
+.nav-bar .nav-bar__list{
+    margin: 0;
+    padding-left: 0;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar .nav-bar__item{
+    font-size: 18px;
+    text-align: center;
+}
+
+.nav-bar__item a{
+    color: var(--text-color);
+    text-decoration: none;
+    text-underline-offset: none;
+}
+
+/* Admin modal */
+.admin-modal{
+    width: 100%;
+    height: 100%;
+}
+.admin-modal .admin-modal__layout{
+    display: flex;
+    background-color: #3b3b3b;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-modal .admin-modal__content{
+    display: flex;
+    background-color: var(--white-color);
+    height: 60%;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.admin-modal__content .admin-modal__header{
+    width: 100%;
+    display: flex;
+    margin: 3.2rem 0;
+}
+
+.admin-modal__header .admin-modal__header--logo{
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0 auto 0 2.8rem;
+}
+
+.admin-modal__header .admin-modal__header--title{
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin: 0 2.8rem 0 auto;
+}
+
+.admin-modal__content .admin-modal__body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.admin-modal__body .admin-modal__acc--title, .admin-modal__acc--inp, .admin-modal__password--title, .admin-modal__password--inp{
+    margin: 0 2.8rem;
+    font-size: 2.2rem;
+}
+
+.admin-modal__body .admin-modal__acc--title, .admin-modal__password--title{
+    /* margin-bottom: 0.5rem; */
+    font-weight: 500;
+}
+
+.admin-modal__body .admin-modal__acc--inp, .admin-modal__password--inp{
+    margin-bottom: 2.8rem;
+    opacity: 0.8;
+    border-radius: 2px solid #c3c3c3;
+}
+
+.admin-modal__content .admin-login-btn{
+    background-color: #242fa9;
+    font-size: 2.2rem;
+    border-radius: 2px solid #000;
+    /* border-style: none; */
+}
+
+#body{
+    position: absolute;
+    left: 0;
+    top: 50px;
+}

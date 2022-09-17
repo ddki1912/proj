@@ -6,40 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eLibrary</title>
-    <link rel="stylesheet" href="./asset/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
 </head>
 
 <body>
     <div id="header">
         <div class="nav-bar">
+            <!-- Logo -->
             <div class="nav-bar__logo">
                 eLibrary
             </div>
+
+            <!-- Navigation at begin -->
             <div class="nav-bar__start">
                 <ul class="nav-bar__list">
+                    <!-- Home -->
                     <li class="nav-bar__item">
                         <a href="#">Home</a>
                     </li>
+
+                    <!-- Admin -->
                     <li class="nav-bar__item">
                         <a href="#">Admin</a>
-                        <div class="admin-modal">
-                            <!-- <div class="login-form active">
-                            <span>Administrator</span>
-                            <input class= "admin-acc" type="text" placeholder="Your ID">
-                            <input class= "admin-password" type="password" placeholder="Password">
-                            </div> -->
-                        </div>
 
                     </li>
+
+                    <!-- Librarian -->
                     <li class="nav-bar__item">
                         <a href="#">Librarian</a>
-                        <div class="lib-modal">
-                            <!-- <div class="login-form active">
-                            <span>Librarian</span>
-                            <input class= "lib-acc" type="text" placeholder="Your ID">
-                            <input class= "lib-password" type="password" placeholder="Password">
-                            </div> -->
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -52,6 +48,28 @@
     </div>
 
     <div id="footer"></div>
+
+
+    <!-- Admin Modal -->
+    <!-- <div class="admin-modal">
+        <div class="admin-modal__layout">
+
+
+            <div class="admin-modal__content">
+                <div class="admin-modal__header">
+                    <span class="admin-modal__header--logo">eLibrary</span>
+                    <span class="admin-modal__header--title">Admin Login</span>
+                </div>
+                <div class="admin-modal__body">
+                    <label class="admin-modal__acc--title" for="account">Account</label>
+                    <input class="admin-modal__acc--inp" type="text" placeholder="Your ID">
+                    <label class="admin-modal__password--title" for="account">Password</label>
+                    <input class="admin-modal__password--inp" type="password" placeholder="Your Password">
+                </div>
+                <button class="admin-login-btn">Login</button>
+            </div>
+        </div>
+    </div> -->
 
     <script></script>
 </body>
