@@ -10,8 +10,6 @@
     height: 50px;
     width: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
 }
 .nav-bar .nav-bar__logo{
     font-size: 3rem;
@@ -21,7 +19,7 @@
     margin: 0 48px 0 56px;
     width: 100px;
     text-align: center;
-    line-height: 50px;
+    line-height: 4.2rem;
 }
 
 .nav-bar .nav-bar__start{
@@ -54,31 +52,51 @@
 .admin-modal{
     width: 100%;
     height: 100%;
-}
-.admin-modal .admin-modal__layout{
-    display: flex;
-    background-color: #3b3b3b;
-    height: 100%;
-    width: 100%;
-    opacity: 0.7;
-    justify-content: center;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(51, 51, 51, 0.6);
+    display: none;
     align-items: center;
+    justify-content: center;
+}
+
+.admin-modal.active{
+    display: flex;
 }
 
 .admin-modal .admin-modal__content{
     display: flex;
     background-color: var(--white-color);
-    height: 60%;
+    height: 70%;
     width: 40%;
     flex-direction: column;
     align-items: center;
     border-radius: 4px;
+    position: relative;
+}
+
+.admin-modal .modal-close{
+    display: block;
+    padding: 0.5rem;
+    font-size: 2.2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.admin-modal .modal-close:hover{
+    cursor: pointer;
+    color: #000;
 }
 
 .admin-modal__content .admin-modal__header{
     width: 100%;
     display: flex;
-    margin: 3.2rem 0;
+    margin: 5rem 0;
 }
 
 .admin-modal__header .admin-modal__header--logo{
@@ -89,7 +107,7 @@
 
 .admin-modal__header .admin-modal__header--title{
     font-size: 2.8rem;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0 2.8rem 0 auto;
 }
 
@@ -106,21 +124,30 @@
 }
 
 .admin-modal__body .admin-modal__acc--title, .admin-modal__password--title{
-    /* margin-bottom: 0.5rem; */
     font-weight: 500;
 }
 
 .admin-modal__body .admin-modal__acc--inp, .admin-modal__password--inp{
     margin-bottom: 2.8rem;
     opacity: 0.8;
-    border-radius: 2px solid #c3c3c3;
+    border-radius: 4px solid #c3c3c3;
 }
 
-.admin-modal__content .admin-login-btn{
-    background-color: #242fa9;
-    font-size: 2.2rem;
-    border-radius: 2px solid #000;
-    /* border-style: none; */
+.admin-modal__body .admin-login-btn{
+    background-color: #347ab6;
+    color: var(--white-color);
+    font-size: 2rem;
+    margin: auto auto 3.2rem auto;
+    line-height: 3rem;
+    border-style: none;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0.3rem 1.4rem 0.5rem 1.4rem;
+}
+
+.admin-modal__body .admin-login-btn:hover{
+    cursor: pointer;
+    background-color: #345bb7;
 }
 
 #body{

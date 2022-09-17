@@ -9,69 +9,90 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./asset/css/base.css">
     <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 
 <body>
-    <div id="header">
-        <div class="nav-bar">
-            <!-- Logo -->
-            <div class="nav-bar__logo">
-                eLibrary
+    <div id="main">
+        <div id="header">
+            <div class="nav-bar">
+                <!-- Logo -->
+                <div class="nav-bar__logo">
+                    eLibrary
+                </div>
+
+                <!-- Navigation at begin -->
+                <div class="nav-bar__start">
+                    <ul class="nav-bar__list">
+                        <!-- Home -->
+                        <li class="nav-bar__item">
+                            <a href="#">Home</a>
+                        </li>
+
+                        <!-- Admin -->
+                        <li class="nav-bar__item">
+                            <a href="#">Admin</a>
+                        </li>
+
+                        <!-- Librarian -->
+                        <li class="nav-bar__item">
+                            <a href="#">Librarian</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-
-            <!-- Navigation at begin -->
-            <div class="nav-bar__start">
-                <ul class="nav-bar__list">
-                    <!-- Home -->
-                    <li class="nav-bar__item">
-                        <a href="#">Home</a>
-                    </li>
-
-                    <!-- Admin -->
-                    <li class="nav-bar__item">
-                        <a href="#">Admin</a>
-
-                    </li>
-
-                    <!-- Librarian -->
-                    <li class="nav-bar__item">
-                        <a href="#">Librarian</a>
-                    </li>
-                </ul>
-            </div>
-
         </div>
-    </div>
 
-    <div id="body">
-        <img src="./asset/img/library-libraries-feature-700x375-1-1280x720.jpg" alt="">
-    </div>
+        <div id="body">
+            <img src="./asset/img/library-libraries-feature-700x375-1-1280x720.jpg" alt="">
+        </div>
 
-    <div id="footer"></div>
+        <div id="footer"></div>
+    </div>
 
 
     <!-- Admin Modal -->
-    <!-- <div class="admin-modal">
-        <div class="admin-modal__layout">
-
-
-            <div class="admin-modal__content">
-                <div class="admin-modal__header">
-                    <span class="admin-modal__header--logo">eLibrary</span>
-                    <span class="admin-modal__header--title">Admin Login</span>
-                </div>
-                <div class="admin-modal__body">
-                    <label class="admin-modal__acc--title" for="account">Account</label>
-                    <input class="admin-modal__acc--inp" type="text" placeholder="Your ID">
-                    <label class="admin-modal__password--title" for="account">Password</label>
-                    <input class="admin-modal__password--inp" type="password" placeholder="Your Password">
-                </div>
+    <div class="admin-modal">
+        <div class="admin-modal__content">
+            <div class="admin-modal__close">
+                <i class="modal-close ti-close"></i>
+            </div>
+            <div class="admin-modal__header">
+                <span class="admin-modal__header--logo">eLibrary</span>
+                <span class="admin-modal__header--title">Admin Login</span>
+            </div>
+            <div class="admin-modal__body">
+                <label class="admin-modal__acc--title" for="account">Account</label>
+                <input class="admin-modal__acc--inp" type="text" placeholder="Your ID">
+                <label class="admin-modal__password--title" for="account">Password</label>
+                <input class="admin-modal__password--inp" type="password" placeholder="Your Password">
                 <button class="admin-login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="libra-modal">
+        <div class="libra-modal__content">
+            <div class="libra-modal__close">
+
+            </div>
+            <div class="libra-modal__header">
+                <span class="libra-modal__header--logo">eLibrary</span>
+                <span class="libra-modal__header--title">Librarian Login</span>
+            </div>
+            <div class="libra-modal__body">
+                <label class="libra-modal__acc--title" for="account">Account</label>
+                <input class="libra-modal__acc--inp" type="text" placeholder="Your ID">
+                <label class="libra-modal__password--title" for="account">Password</label>
+                <input class="libra-modal__password--inp" type="password" placeholder="Your Password">
+                <button class="libra-login-btn">Login</button>
             </div>
         </div>
     </div> -->
 
-    <script></script>
+    <script>
+    </script>
 </body>
 
 </html>
