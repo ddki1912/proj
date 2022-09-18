@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- Content -->
     <div id="main">
         <div id="header">
             <div class="nav-bar">
@@ -22,76 +23,89 @@
                 </div>
 
                 <!-- Navigation at begin -->
-                <div class="nav-bar__start">
-                    <ul class="nav-bar__list">
-                        <!-- Home -->
-                        <li class="nav-bar__item">
-                            <a href="#">Home</a>
-                        </li>
+                <ul class="nav-bar__list">
+                    <!-- Home -->
+                    <li class="nav-bar__item">
+                        Home
+                    </li>
 
-                        <!-- Admin -->
-                        <li class="nav-bar__item">
-                            <a href="#">Admin</a>
-                        </li>
+                    <!-- Admin -->
+                    <li class="nav-bar__item js-show-modal admin">
+                        Admin
+                    </li>
 
-                        <!-- Librarian -->
-                        <li class="nav-bar__item">
-                            <a href="#">Librarian</a>
-                        </li>
-                    </ul>
-                </div>
+                    <!-- Librarian -->
+                    <li class="nav-bar__item js-show-modal libra">
+                        Librarian
+                    </li>
+                </ul>
 
             </div>
         </div>
 
         <div id="body">
-            <img src="./asset/img/library-libraries-feature-700x375-1-1280x720.jpg" alt="">
+            <img src="./asset/img/libraries-new-normal-min.jpg" alt="">
         </div>
 
-        <div id="footer"></div>
     </div>
 
-
-    <!-- Admin Modal -->
-    <div class="admin-modal">
-        <div class="admin-modal__content">
-            <div class="admin-modal__close">
-                <i class="modal-close ti-close"></i>
+    <!-- Login Modal -->
+    <div class="login-modal js-modal">
+        <div class="login-modal__content js-modal-content">
+            <div class="login-modal__close">
+                <i class="modal-close ti-close js-modal-close"></i>
             </div>
-            <div class="admin-modal__header">
-                <span class="admin-modal__header--logo">eLibrary</span>
-                <span class="admin-modal__header--title">Admin Login</span>
+            <div class="login-modal__header">
+                <span class="login-modal__header--logo">eLibrary</span>
+                <span class="login-modal__header--title js-modal-title">Login</span>
             </div>
-            <div class="admin-modal__body">
-                <label class="admin-modal__acc--title" for="account">Account</label>
-                <input class="admin-modal__acc--inp" type="text" placeholder="Your ID">
-                <label class="admin-modal__password--title" for="account">Password</label>
-                <input class="admin-modal__password--inp" type="password" placeholder="Your Password">
-                <button class="admin-login-btn">Login</button>
+            <div class="login-modal__body">
+                <label class="login-modal__acc--title" for="account">Account</label>
+                <input class="login-modal__acc--inp" type="text" placeholder="Your ID">
+                <label class="login-modal__password--title" for="password">Password</label>
+                <input class="login-modal__password--inp" type="password" placeholder="Your Password">
+                <button class="login-btn">Login</button>
             </div>
         </div>
     </div>
-
-    <!-- <div class="libra-modal">
-        <div class="libra-modal__content">
-            <div class="libra-modal__close">
-
-            </div>
-            <div class="libra-modal__header">
-                <span class="libra-modal__header--logo">eLibrary</span>
-                <span class="libra-modal__header--title">Librarian Login</span>
-            </div>
-            <div class="libra-modal__body">
-                <label class="libra-modal__acc--title" for="account">Account</label>
-                <input class="libra-modal__acc--inp" type="text" placeholder="Your ID">
-                <label class="libra-modal__password--title" for="account">Password</label>
-                <input class="libra-modal__password--inp" type="password" placeholder="Your Password">
-                <button class="libra-login-btn">Login</button>
-            </div>
-        </div>
-    </div> -->
 
     <script>
+        const admin = document.querySelector(".admin");
+        const libra = document.querySelector(".libra");
+        const loginForm = document.querySelectorAll(".js-show-modal");
+        const loginModal = document.querySelector(".js-modal");
+        const loginModalContent = document.querySelector(".js-modal-content");
+        const loginClose = document.querySelector(".js-modal-close");
+        const loginTitle = document.querySelector(".js-modal-title");
+
+        function showLoginForm() {
+            loginModal.classList.add("active");
+        }
+
+        function closeLogin() {
+            loginModal.classList.remove("active");
+        }
+
+        admin.onclick = function(){
+            loginTitle.innerHTML = "Admin Login";
+        }
+
+        libra.onclick = function(){
+            loginTitle.innerHTML = "Librarian Login";
+        }
+
+        for (const login of loginForm) {
+            login.addEventListener("click", showLoginForm);
+        }
+
+        loginClose.addEventListener("click", closeLogin);
+
+        loginModal.addEventListener("click", closeLogin);
+
+        loginModalContent.addEventListener("click", function (e) {
+            e.stopPropagation();
+        });
+
     </script>
 </body>
 

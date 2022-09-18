@@ -1,13 +1,14 @@
 :root{
     --text-color: #c9c9c9;
     --white-color: #fff;
+    --black-color: #000;
 }
 
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0;
     margin: 0;
-    box-sizing: border-box ;
+    box-sizing: border-box;
 }
 
 html{
