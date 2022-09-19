@@ -14,17 +14,17 @@
     position: fixed;
 }
 
-.nav-bar .nav-bar__logo {
+.nav-bar__logo {
     font-size: 3rem;
     font-weight: 700;
     color: var(--text-color);
     margin: 0 24px 0 60px;
     width: 117px;
-    line-height: 44px;
+    line-height: 45px;
 }
 
-.nav-bar .nav-bar__list {
-    width: 100%;
+.nav-bar__list {
+    max-width: 60%;
     padding-left: 0;
     height: 100%;
     list-style: none;
@@ -33,13 +33,15 @@
 
 .nav-bar__list .nav-bar__item {
     color: var(--text-color);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     display: inline-flex;
-    width: 120px;
+    min-width: 120px;
     height: 100%;
+    flex: 1;
     align-items: center;
     justify-content: center;
+    flex: content;
 }
 
 .nav-bar__list .nav-bar__item:hover {
@@ -157,10 +159,9 @@
     font-size: 2rem;
     margin: auto auto 3.2rem auto;
     line-height: 3rem;
-    border-style: none;
     border-radius: 3px;
-    text-align: center;
     padding: 0.3rem 1.4rem 0.5rem 1.4rem;
+    text-decoration: none;
 }
 
 .login-modal__body .login-btn:hover {
@@ -174,4 +175,10 @@
     position: relative;
     margin-top: 50px;
     width: 100%;
+}
+
+.body-content{
+    background-color: #fff;
+    width: 60%;
+    height: 40%;
 }

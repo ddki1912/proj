@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/admin.css">
+    <link rel="stylesheet" href="./asset/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 <body>
-    
+    <!-- Content -->
+    <div id="main">
+        <div id="header">
+            <div class="nav-bar">
+                <!-- Logo -->
+                <div class="nav-bar__logo">
+                    eLibrary
+                </div>
+
+                <!-- Navigation -->
+                <ul class="nav-bar__list">
+                    <!-- Home -->
+                    <li class="nav-bar__item">
+                        Home
+                    </li>
+
+                    <!-- Admin -->
+                    <li class="nav-bar__item js-show-modal admin">
+                        Add Librarian
+                    </li>
+
+                    <!-- Librarian -->
+                    <li class="nav-bar__item js-show-modal libra">
+                        Edit Librarian
+                    </li>
+
+                    <li class="nav-bar__item js-show-modal libra">
+                        Delete Librarian
+                    </li>
+                </ul>
+                
+                <a href="http://127.0.0.1:5500/index.html" class="logout-btn" role="button">Logout</a>
+            </div>
+        </div>
+
+        <div id="body">
+            <img src="./asset/img/library-libraries-feature-700x375-1-1280x720.jpg" alt="">
+            <div class="body-content"></div>
+        </div>
+
+    </div>
 </body>
 </html>

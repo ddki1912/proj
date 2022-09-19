@@ -8,7 +8,7 @@
     <title>eLibrary</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./asset/css/base.css">
-    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/login.css">
     <link rel="stylesheet" href="./asset/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 
@@ -64,7 +64,7 @@
                 <input class="login-modal__acc--inp" type="text" placeholder="Your ID">
                 <label class="login-modal__password--title" for="password">Password</label>
                 <input class="login-modal__password--inp" type="password" placeholder="Your Password">
-                <button class="login-btn">Login</button>
+                <a class="login-btn" role="button">Login</a>
             </div>
         </div>
     </div>
@@ -77,6 +77,7 @@
         const loginModalContent = document.querySelector(".js-modal-content");
         const loginClose = document.querySelector(".js-modal-close");
         const loginTitle = document.querySelector(".js-modal-title");
+        const loginBtn = document.querySelector(".login-btn")
 
         function showLoginForm() {
             loginModal.classList.add("active");
@@ -86,12 +87,15 @@
             loginModal.classList.remove("active");
         }
 
-        admin.onclick = function(){
+        admin.onclick = function () {
             loginTitle.innerHTML = "Admin Login";
+            loginBtn.setAttribute("href", "http://127.0.0.1:5500/admin.html");
+
         }
 
-        libra.onclick = function(){
+        libra.onclick = function () {
             loginTitle.innerHTML = "Librarian Login";
+            loginBtn.setAttribute("href", "http://127.0.0.1:5500/librarian.html");
         }
 
         for (const login of loginForm) {
