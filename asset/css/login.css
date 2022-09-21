@@ -35,32 +35,33 @@
     color: var(--text-color);
     font-size: 1.8rem;
     font-weight: 500;
-    display: inline-flex;
+    display: inline-block;
     min-width: 120px;
     height: 100%;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    flex: content;
+    text-align: center;
+    line-height: 50px;
+    padding: 0 2rem;
 }
 
 .nav-bar__list .nav-bar__item:hover {
     cursor: pointer;
     color: #272424;
-    background-color: #c3c3c3;
+    background-color: var(--bg-color);
 }
 
 /* Login modal */
 @keyframes showModal {
-    from{
+    from {
         opacity: 0;
         transform: translateY(-140px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 .login-modal {
     width: 100%;
     height: 100%;
@@ -150,7 +151,9 @@
 .login-modal__password--inp {
     margin-bottom: 2.8rem;
     opacity: 0.8;
-    border-radius: 4px solid #c3c3c3;
+    border-style: none;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
 }
 
 .login-modal__body .login-btn {
@@ -171,13 +174,13 @@
 
 /* Body */
 
-#body img{
+#body img {
     position: relative;
     margin-top: 50px;
     width: 100%;
 }
 
-.body-content{
+.body-content {
     background-color: #fff;
     width: 60%;
     height: 40%;

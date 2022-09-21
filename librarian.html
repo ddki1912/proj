@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Librarian section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/libra.css">
+    <link rel="stylesheet" href="./asset/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
+
 <body>
-    
+    <!-- Content -->
+    <div id="main">
+        <div id="header">
+            <div class="nav-bar">
+                <!-- Logo -->
+                <div class="nav-bar__logo">
+                    eLibrary
+                </div>
+
+                <!-- Navigation -->
+                <ul class="nav-bar__list">
+                    <!-- Home -->
+                    <li class="nav-bar__item">
+                        HOME
+                    </li>
+
+                    <!-- Reader -->
+                    <li class="nav-bar__item ">
+                        <a href="#" class="sub-nav__title">
+                            READER
+                            <i class="sub-nav__icon ti-angle-down"></i>
+                        </a>
+                        <ul class="sub-nav__list">
+                            <li class="sub-nav__item">Add Reader</li>
+                            <li class="sub-nav__item">Edit Reader</li>
+                            <li class="sub-nav__item">Delete Reader</li>
+                        </ul>
+                    </li>
+
+                    <!-- Books -->
+                    <li class="nav-bar__item">
+                        <a href="#" class="sub-nav__title">
+                            BOOKS
+                            <i class="sub-nav__icon ti-angle-down"></i>
+                        </a>
+                        <ul class="sub-nav__list">
+                            <li class="sub-nav__item">Add Books</li>
+                            <li class="sub-nav__item">Edit Books</li>
+                            <li class="sub-nav__item">Delete Books</li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <a href="http://127.0.0.1:5500/index.html" class="logout-btn" role="button">Logout</a>
+            </div>
+        </div>
+
+        <div id="body">
+            <img src="./asset/img/library-libraries-feature-700x375-1-1280x720.jpg" alt="">
+            <div class="body-content"></div>
+        </div>
+
+    </div>
 </body>
+
 </html>
