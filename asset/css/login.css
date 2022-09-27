@@ -3,6 +3,8 @@
 #header {
     position: fixed;
     z-index: 1;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Navigation at begin */
@@ -135,22 +137,18 @@
 }
 
 .login-modal__acc--title,
-.login-modal__acc--inp,
-.login-modal__password--title,
-.login-modal__password--inp {
+.login-modal__password--title {
     margin: 0 2.8rem;
     font-size: 2.2rem;
-}
-
-.login-modal__acc--title,
-.login-modal__password--title {
     font-weight: 500;
 }
 
 .login-modal__acc--inp,
 .login-modal__password--inp {
-    margin-bottom: 2.8rem;
+    font-size: 1.8rem;
     opacity: 0.8;
+    padding: 6px 8px;
+    margin: 0 2.8rem 2.8rem;
     border-style: none;
     border: 2px solid rgba(0, 0, 0, 0.4);
     border-radius: 4px;
