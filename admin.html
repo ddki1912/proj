@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin section</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./asset/css/base.css">
     <link rel="stylesheet" href="./asset/css/admin.css">
     <link rel="stylesheet" href="./asset/font/themify-icons-font/themify-icons/themify-icons.css">
@@ -22,76 +23,250 @@
                     eLibrary
                 </div>
 
-                <!-- Navigation -->
-                <ul class="nav-bar__list">
-                    <!-- Home -->
-                    <li class="nav-bar__item">
-                        HOME
-                    </li>
+                <!-- Search -->
+                <div id="search">
+                    <input class="search__inp" type="text" placeholder="Search for librarian">
+                    <i class="search__icon ti-search"></i>
+                </div>
 
-                    <!-- Add -->
-                    <li class="nav-bar__item ">
-                        ADD LIBRARIAN
-                    </li>
-
-                    <!-- Edit -->
-                    <li class="nav-bar__item ">
-                        EDIT LIBRARIAN
-                    </li>
-
-                    <!-- Delete -->
-                    <li class="nav-bar__item ">
-                        DELETE LIBRARIAN
-                    </li>
-                </ul>
-
+                <!-- Logout -->
                 <a href="http://127.0.0.1:5500/index.html" class="logout-btn" role="button">Logout</a>
             </div>
         </div>
 
         <div id="body">
-            <!-- <img src="./asset/img/library-libraries-feature-700x375-1-1280x720.jpg" alt=""> -->
-            <div id="body-content">
+            <div id="content">
+                
+                <!-- Add librarian -->
                 <div id="add">
-                    <div class="add-title">ADD LIBRARIAN</div>
-                    <div class="info">
-                        <ul class="info__list">
-                            <li class="info__item">
-                                <label class="" for="name">Name</label>
-                                <label class="" for="important">*</label>
-                                <input class="info__item--inp" type="text" placeholder="Enter your Name">
-                            </li>
-                            <li class="info__item">
-                                <label class="" for="Email">Email</label>
-                                <input class="info__item--inp" type="text" placeholder="Enter your Email">
-                            </li>
+                    <button class="add-btn btn add-js">+ Add librarian</button>
+                </div>
 
-                        </ul>
-                        <ul class="info__list">
-                            <li class="info__item">
-                                <label class="" for="ID">ID</label>
-                                <label class="" for="important">*</label>
-                                <input class="info__item--inp" type="text" placeholder="Enter your ID">
-                            </li>
-                            <li class="info__item">
-                                <label class="" for="Phone">Phone</label>
-                                <label class="" for="important">*</label>
-                                <input class="info__item--inp" type="text" placeholder="Enter your Phone">
-                            </li>
-                        </ul>
+                <!-- Show list of librarian -->
+                <div id="table" >
+                    <table class="libra-list">
+                        <tr class="libra-list__item">
+                            <th class="libra-list__title" colspan="7">Librarian's Information</th>
+                        </tr>
+                        <tr class="libra-list__item">
+                            <th class="libra-list__heading">No</th>
+                            <th class="libra-list__heading">ID</th>
+                            <th class="libra-list__heading">Full name</th>
+                            <th class="libra-list__heading">Date of birth</th>
+                            <th class="libra-list__heading">Phone</th>
+                            <th class="libra-list__heading">Email</th>
+                            <th class="libra-list__heading">Manipulation</th>
+                        </tr>
+                        
+                        <tr class="libra-list__item">
+                            <td class="libra-list__value">1</td>
+                            <td class="libra-list__value">B20DCCN352</td>
+                            <td class="libra-list__value">Do Duy Kien</td>
+                            <td class="libra-list__value">19/12/2002</td>
+                            <td class="libra-list__value">0963448172</td>
+                            <td class="libra-list__value">ddkien1912@gmail.com</td>
+                            <td class="libra-item__function">
+                                <i class="edit-btn fa-solid fa-pen edit-js"></i>
+                                <i class="delete-btn fa-solid fa-trash delete-js"></i>
+                            </td>
+                        </tr>
+                        
+                        <tr class="libra-list__item">
+                            <td class="libra-list__value">2</td>
+                            <td class="libra-list__value">B20DCCN352</td>
+                            <td class="libra-list__value">Do Duy Kien</td>
+                            <td class="libra-list__value">19/12/2002</td>
+                            <td class="libra-list__value">0963448172</td>
+                            <td class="libra-list__value">ddkien1912@gmail.com</td>
+                            <td class="libra-item__function">
+                                <i class="edit-btn fa-solid fa-pen edit-js"></i>
+                                <i class="delete-btn fa-solid fa-trash delete-js"></i>
+                            </td>
+                        </tr>
+
+                        <tr class="libra-list__item">
+                            <td class="libra-list__value">3</td>
+                            <td class="libra-list__value">B20DCCN352</td>
+                            <td class="libra-list__value">Do Duy Kien</td>
+                            <td class="libra-list__value">19/12/2002</td>
+                            <td class="libra-list__value">0963448172</td>
+                            <td class="libra-list__value">ddkien1912@gmail.com</td>
+                            <td class="libra-item__function">
+                                <i class="edit-btn fa-solid fa-pen edit-js"></i>
+                                <i class="delete-btn fa-solid fa-trash delete-js"></i>
+                            </td>
+                        </tr>
+                        <tr class="libra-list__item">
+                            <td class="libra-list__value">4</td>
+                            <td class="libra-list__value">B20DCCN352</td>
+                            <td class="libra-list__value">Do Duy Kien</td>
+                            <td class="libra-list__value">19/12/2002</td>
+                            <td class="libra-list__value">0963448172</td>
+                            <td class="libra-list__value">ddkien1912@gmail.com</td>
+                            <td class="libra-item__function">
+                                <i class="edit-btn fa-solid fa-pen edit-js"></i>
+                                <i class="delete-btn fa-solid fa-trash delete-js"></i>
+                            </td>
+                        </tr>
+                        <tr class="libra-list__item">
+                            <td class="libra-list__value">5</td>
+                            <td class="libra-list__value">B20DCCN352</td>
+                            <td class="libra-list__value">Do Duy Kien</td>
+                            <td class="libra-list__value">19/12/2002</td>
+                            <td class="libra-list__value">0963448172</td>
+                            <td class="libra-list__value">ddkien1912@gmail.com</td>
+                            <td class="libra-item__function">
+                                <i class="edit-btn fa-solid fa-pen edit-js"></i>
+                                <i class="delete-btn fa-solid fa-trash delete-js"></i>
+                            </td>
+                        </tr>
+                        <tr class="libra-list__item">
+                            <td class="libra-list__value">6</td>
+                            <td class="libra-list__value">B20DCCN352</td>
+                            <td class="libra-list__value">Do Duy Kien</td>
+                            <td class="libra-list__value">19/12/2002</td>
+                            <td class="libra-list__value">0963448172</td>
+                            <td class="libra-list__value">ddkien1912@gmail.com</td>
+                            <td class="libra-item__function">
+                                <i class="edit-btn fa-solid fa-pen edit-js"></i>
+                                <i class="delete-btn fa-solid fa-trash delete-js"></i>
+                            </td>
+                        </tr>
+
+
+                    </table>
+                    
+                </div>
+            </div>
+            
+            
+            <div id="home">
+
+                <div class="container">
+                    <div class="body-content home-page-js">
+
                     </div>
-                    <Button class="">Add</Button>
                 </div>
-                <div id="edit">
+            </div>
+
+
+            <!-- <div id="add">
+                <div class="container">
+                    <div class="body-content  add-form-js">
+
+
+                        <div class="add-title">ADD LIBRARIAN</div>
+
+
+                        <ul class="info__list">
+                            <li class="info__item">
+                                <div class="info-title">
+                                    Name
+                                    <div class="info-vip">*</div>
+                                </div>
+                                <div class="info__item--inp">
+                                    <input class="info--inp" type="text" placeholder="Eg. Nguyen Van A">
+                                    <span class="info--notice">Please enter your full name</span>
+                                </div>
+
+                            </li>
+                            <li class="info__item">
+                                <div class="info-title" for="ID">
+                                    ID
+                                    <div class="info-vip" for="important">*</div>
+                                </div>
+                                <div class="info__item--inp">
+                                    <input class="info--inp" type="text" placeholder="Eg. B20DCCN000">
+                                    <span class="info--notice">Please enter your ID</span>
+                                </div>
+                            </li>
+                            <li class="info__item">
+                                <div class="info-title" for="dob">
+                                    Date of birth
+                                    <div class="info-vip" for="important">*</div>
+                                </div>
+                                <div class="info__item--inp">
+                                    <input class="info--inp" type="text" placeholder="Eg. 01/01/2002">
+                                    <span class="info--notice">Please enter your date of birth</span>
+                                </div>
+
+                            </li>
+                            <li class="info__item">
+                                <div class="info-title" for="Email">Email</div>
+                                <div class="info__item--inp">
+                                    <input class="info--inp" type="text" placeholder="Eg. abc123@gmail.com">
+                                </div>
+                            </li>
+                            <li class="info__item">
+                                <div class="info-title" for="Phone">
+                                    Phone
+                                    <div class="info-vip" for="important">*</div>
+                                </div>
+                                <div class="info__item--inp">
+                                    <input class="info--inp" type="text" placeholder="Eg. 0918581223">
+                                    <span class="info--notice">Please enter your phone number</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <Button class="add-btn">ADD</Button>
+
+                    </div>
 
                 </div>
-                <div id="delete">
+            </div> -->
+
+            <!-- Edit librarian -->
+            <div id="edit">
+                <div class="container">
+                    <div class="body-content edit-form-js">
+
+                    </div>
 
                 </div>
             </div>
+
+            <!-- Delete librarian -->
+            <div id="delete">
+                <div class="container">
+                    <div class="body-content delete-form-js">
+
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
+
+    <script>
+        const home = document.querySelector(".home-js");
+        const addLibra = document.querySelector(".add-js");
+        const editLibra = document.querySelector(".edit-js");
+        const deleteLibra = document.querySelector(".delete-js");
+
+        function stopShowForm(){
+            const activedList = document.querySelectorAll(".active");
+            for(let item of activedList){
+                item.classList.remove("active");
+            }
+        }
+
+        function showAddForm(){
+            document.querySelector("#add").classList.add("active");
+            document.querySelector(".add-form-js").classList.add("active");
+        }
+
+        function showEditForm(){
+            document.querySelector("#edit").classList.add("active");
+            document.querySelector(".edit-form-js").classList.add("active");
+        }
+
+        addLibra.addEventListener("click",stopShowForm);
+        addLibra.addEventListener("click", showAddForm);
+        editLibra.addEventListener("click", stopShowForm);
+        editLibra.addEventListener("click", showEditForm);
+    </script>
 </body>
 
 </html>

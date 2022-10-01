@@ -13,6 +13,7 @@
         + Reader
             . add Reader
             . edit Reader
+            . borrow Books
             . delete Reader
 2. body
     - Admin
@@ -38,8 +39,14 @@
                 - DOB
                 - Email 
                 - Phone
-            . edit
-                - Name of book borrowed
+            .edit
+                - Input ID of librarian
+                - changable
+                    + Name
+                    + Email
+                    + Phone
+            . Borrow
+                - ID of book borrowed
                 - Date of borrowed
                 - Date of return
             . delete
@@ -50,11 +57,15 @@
                 - Type
                 - Numbers of Books
             . edit
-                - Numbers of Books
+                - Input Id of Books
+                - Output
+                    + ID
+                    + Name of Books
+                    + Type
+                    + Numbers of Books
+                    + borrowed
+                    + remain
             . delete
                 - Numbers of Books
 
-3. footer
-    - Copyright
-    - Contact for our help (fb, linkedin, email, Phone)
         
