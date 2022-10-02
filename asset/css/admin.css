@@ -1,4 +1,5 @@
 /* Header */
+
 #header {
     position: fixed;
     top: 0;
@@ -9,6 +10,7 @@
 }
 
 /* Navigation & Search */
+
 .nav-bar {
     display: inline-flex;
     background-color: #000;
@@ -20,43 +22,48 @@
     font-size: 3rem;
     font-weight: 700;
     color: var(--text-color);
-    margin-left: 60px;
+    margin-left: 5%;
     width: 10%;
     line-height: 45px;
 }
 
-#search{
+/* Search */
+
+#search {
     width: 70%;
     height: 100%;
     padding: 5px 30px;
     text-align: center;
 }
 
-.search__inp{
+.search__inp {
     width: 70%;
     font-size: 1.6rem;
     line-height: 25px;
-    height: 99%;
+    height: 100%;
     padding: 6px 10px;
     border-radius: 3px;
     border: none;
 }
 
-.search__icon{
+.search__icon {
     display: inline-block;
     background-color: var(--btn-color);
     font-size: 1.85rem;
+    height: 100%;
     color: var(--white-color);
     padding: 10px 20px;
     border-radius: 3px;
     margin-left: 4px;
-    transform: translateY(0.5px);
+    text-align: center;
 }
 
-.search__icon:hover{
+.search__icon:hover {
     cursor: pointer;
     background-color: var(--btn-hover-color);
 }
+
+/* Logout */
 
 .logout-btn {
     background-color: var(--white-color);
@@ -79,6 +86,7 @@
 }
 
 /* Body */
+
 #body {
     display: flex;
     margin-top: 5rem;
@@ -86,23 +94,23 @@
     justify-content: center;
 }
 
-#content{
+#content {
     background-color: beige;
     width: 100%;
     margin: 3rem 3rem;
-    border: 2px solid var(--black-color);
+    border: 1px solid var(--black-color);
     border-radius: 4px;
     overflow: hidden;
 }
 
-#add{
+#add {
     position: relative;
     width: 100%;
     height: 40.5px;
-    margin: 50px 0px 0px; 
+    margin: 50px 0px 0px;
 }
 
-.add-btn{
+.add-btn {
     position: absolute;
     top: 0;
     right: 0;
@@ -123,131 +131,179 @@
     width: 100%;
 }
 
-.libra-list__item{
+.libra-list__item {
     border-bottom: 2px solid #ddd;
 }
 
-.libra-list__title{
+.libra-list__title {
     font-size: 3rem;
     padding: 10px 12px;
 }
 
-.libra-list__heading{
+.libra-list__heading {
     text-align: center;
     padding: 8px 16px;
 }
 
 .libra-list__value,
-.libra-item__function{
+.libra-item__function {
     width: fit-content;
     text-align: center;
     padding: 8px 16px;
 }
 
 .edit-btn,
-.delete-btn{
+.delete-btn {
     padding: 4px;
     margin: 0 6px;
 }
 
 .edit-btn:hover,
-.delete-btn:hover{
+.delete-btn:hover {
     cursor: pointer;
 }
 
 
+/* Add-modal & Edit-modal */
 
-/* #add.active,
-.body-content.active {
-    display: block;
-}
-
-#add {
+#add-modal,
+#edit-modal,
+#delete-modal{
     display: none;
-    background-image: url("../img/library-libraries-feature-700x375-1-1280x720.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 5rem;
-    padding-bottom: 10rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(51, 51, 51, 0.6);
 }
 
-.container {
+#add-modal.active, 
+#edit-modal.active,
+#delete-modal.active{
     display: flex;
-    justify-content: center;
-    transform: translateY(50px);
-    width: 100%;
-    height: 100%;
 }
 
 .body-content {
-    display: none;
+    display: block;
     background-color: var(--white-color);
     width: 50%;
-    border-radius: 10px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    animation: showModal ease 0.5s;
     text-align: center;
+    margin-top: 50px;
 }
 
-.add-title {
-    color: var(--black-color);
-    font-size: 4rem;
-    font-weight: 500;
-    margin: 3rem 0;
-    text-align: center;
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0.6rem;
 }
 
+.modal-close:hover{
+    cursor: pointer;
+    color: var(--white-color);
+    background-color: red;
+}
+
+.add-title,
+.edit-title{
+    background-color: #bbb;
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 30px 20px;
+}
 
 .info__list {
     list-style: none;
-    font-size: 1.8rem;
     text-align: center;
+    padding: 20px 30px 10px;
 }
 
-.info-title {
-    color: #000;
+.info__item {
+    margin-bottom: 10px;
+}
+
+.info__item--title {
+    font-size: 1.8rem;
     font-weight: 500;
-    width: 300px;
     text-align: left;
-    margin-left: 10.5%;
+    margin-bottom: 3px;
 }
 
-.info-vip {
-    display: inline-block;
+.info__item--vip {
     color: red;
 }
 
 .info__item--inp {
-    height: 20px;
-    margin: 0 0 4rem 10.5%;
     text-align: left;
+    height: 45px;
 }
 
-.info--inp {
-    width: 88%;
-    display: flex;
-    padding: 4px 6px;
+.info--inp{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 6px 6px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 3px;
 }
 
-.info--notice {
-    color: red;
-    font-size: 1.6rem;
-    font-weight: 400;
-    text-align: left;
-}
-
-.add-btn {
-    background-color: var(--btn-color);
-    color: var(--white-color);
-    font-size: 2rem;
+.info--notice{
+    margin-top: 5px;
+    font-size: 1.4rem;
     font-weight: 500;
-    border: none;
-    border-radius: 3px;
-    padding: 8px 12px;
-    margin: 2rem 0 4rem;
+    color: red;
+    opacity: 0.8;
 }
 
-.add-btn:hover {
-    cursor: pointer;
-    background-color: var(--btn-hover-color);
-} */
+.add-notice{
+    display: none;
+    color: red;
+    line-height: 15px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 0px 30px 10px;
+}
+
+.add-notice.active{
+    display: block;
+}
+
+.add-modal-btn,
+.edit-modal-btn{
+    font-size: 2rem;
+    padding: 8px 12px;
+    margin: 10px 0 30px;
+}
+
+/* Delete-modal */
+#delete-modal .body-content{
+    margin-top: 0;
+}
+
+.delete__quest{
+    background-color: #bbb;
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.delete__answer{
+    display: block;
+    padding: 20px 30px;
+}
+
+.delete__answer .btn{
+    font-size: 2.2rem;
+    padding: 8px 14px;
+    margin: 0 15px;
+}

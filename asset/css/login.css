@@ -8,6 +8,7 @@
 }
 
 /* Navigation at begin */
+
 .nav-bar {
     display: inline-flex;
     background-color: #000;
@@ -51,17 +52,6 @@
 }
 
 /* Login modal */
-@keyframes showModal {
-    from {
-        opacity: 0;
-        transform: translateY(-140px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .login-modal {
     width: 100%;
