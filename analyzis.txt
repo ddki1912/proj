@@ -2,19 +2,9 @@
     - Home
         + a quote about Books
     - Admin 
-        + add librarian
-        + edit librarian
-        + delete librarian
+        + login, logout
     - Librarian
-        + Books
-            . add Books
-            . edit Books
-            . delete Books
-        + Reader
-            . add Reader
-            . edit Reader
-            . borrow Books
-            . delete Reader
+        + login, logout
 2. body
     - Admin
         + add
@@ -24,48 +14,34 @@
             . Phone
             . Email
         + edit
-            . Input ID of librarian
             . Can changable
                 - Name librarian
                 - Phone
                 - Email
-                - Password
         + delete
     -Librarian
         + Reader
             . add
-                - ID
                 - Name
                 - DOB
-                - Email 
                 - Phone
             .edit
-                - Input ID of librarian
                 - changable
                     + Name
-                    + Email
+                    + DOB
                     + Phone
             . Borrow
-                - ID of book borrowed
+                - ID of borrowed book 
                 - Date of borrowed
                 - Date of return
             . delete
         + Books
             . add
-                - ID
                 - Name
-                - Type
+                - Authors
                 - Numbers of Books
             . edit
-                - Input Id of Books
-                - Output
-                    + ID
-                    + Name of Books
-                    + Type
+                - changable
                     + Numbers of Books
-                    + borrowed
-                    + remain
-            . delete
-                - Numbers of Books
 
         
