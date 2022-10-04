@@ -36,7 +36,6 @@
 
         <div id="body">
             <div id="content">
-
                 <!-- Add librarian -->
                 <div id="add">
                     <button class="add-btn btn add-js">+ Add librarian</button>
@@ -46,7 +45,7 @@
                 <div id="table">
                     <table class="libra-list">
                         <tr class="libra-list__item">
-                            <th class="libra-list__title" colspan="7">Librarian's Information</th>
+                            <th class="libra-list__title" colspan="7">Librarians' Information</th>
                         </tr>
                         <tr class="libra-list__item">
                             <th class="libra-list__heading">No</th>
@@ -55,12 +54,11 @@
                             <th class="libra-list__heading">Date of birth</th>
                             <th class="libra-list__heading">Phone</th>
                             <th class="libra-list__heading">Email</th>
-                            <th class="libra-list__heading">Manipulation</th>
                         </tr>
 
                         <tr class="libra-list__item">
                             <td class="libra-list__value">1</td>
-                            <td class="libra-list__value">B20DCCN352</td>
+                            <td class="libra-list__value">LB001</td>
                             <td class="libra-list__value">Do Duy Kien</td>
                             <td class="libra-list__value">19/12/2002</td>
                             <td class="libra-list__value">0963448172</td>
@@ -73,7 +71,7 @@
 
                         <tr class="libra-list__item">
                             <td class="libra-list__value">2</td>
-                            <td class="libra-list__value">B20DCCN352</td>
+                            <td class="libra-list__value">LB002</td>
                             <td class="libra-list__value">Do Duy Kien</td>
                             <td class="libra-list__value">19/12/2002</td>
                             <td class="libra-list__value">0963448172</td>
@@ -84,42 +82,6 @@
                             </td>
                         </tr>
 
-                        <tr class="libra-list__item">
-                            <td class="libra-list__value">3</td>
-                            <td class="libra-list__value">B20DCCN352</td>
-                            <td class="libra-list__value">Do Duy Kien</td>
-                            <td class="libra-list__value">19/12/2002</td>
-                            <td class="libra-list__value">0963448172</td>
-                            <td class="libra-list__value">ddkien1912@gmail.com</td>
-                            <td class="libra-item__function">
-                                <i class="edit-btn fa-solid fa-pen edit-js"></i>
-                                <i class="delete-btn fa-solid fa-trash delete-js"></i>
-                            </td>
-                        </tr>
-                        <tr class="libra-list__item">
-                            <td class="libra-list__value">4</td>
-                            <td class="libra-list__value">B20DCCN352</td>
-                            <td class="libra-list__value">Do Duy Kien</td>
-                            <td class="libra-list__value">19/12/2002</td>
-                            <td class="libra-list__value">0963448172</td>
-                            <td class="libra-list__value">ddkien1912@gmail.com</td>
-                            <td class="libra-item__function">
-                                <i class="edit-btn fa-solid fa-pen edit-js"></i>
-                                <i class="delete-btn fa-solid fa-trash delete-js"></i>
-                            </td>
-                        </tr>
-                        <tr class="libra-list__item">
-                            <td class="libra-list__value">5</td>
-                            <td class="libra-list__value">B20DCCN352</td>
-                            <td class="libra-list__value">Do Duy Kien</td>
-                            <td class="libra-list__value">19/12/2002</td>
-                            <td class="libra-list__value">0963448172</td>
-                            <td class="libra-list__value">ddkien1912@gmail.com</td>
-                            <td class="libra-item__function">
-                                <i class="edit-btn fa-solid fa-pen edit-js"></i>
-                                <i class="delete-btn fa-solid fa-trash delete-js"></i>
-                            </td>
-                        </tr>
 
                     </table>
 
@@ -155,7 +117,7 @@
                 </li>
 
                 <li class="info__item">
-                    <div class="info__item--title" for="dob">
+                    <div class="info__item--title">
                         Date of birth
                         <span class="info__item--vip">*</span>
                     </div>
@@ -166,14 +128,14 @@
                 </li>
 
                 <li class="info__item">
-                    <div class="info__item--title" for="Email">Email</div>
+                    <div class="info__item--title">Email</div>
                     <div class="info__item--inp">
                         <input class="info--inp" type="email" placeholder="Eg. abc123@gmail.com">
                     </div>
                 </li>
 
                 <li class="info__item">
-                    <div class="info__item--title" for="Phone">
+                    <div class="info__item--title">
                         Phone
                         <span class="info__item--vip">*</span>
                     </div>
@@ -269,62 +231,7 @@
         </div>
     </div>
 
-    <script>
-        const addLibra = document.querySelector(".add-js");
-        const editLibras = document.querySelectorAll(".edit-js");
-        const deleteLibras = document.querySelectorAll(".delete-js");
-
-        const addModal = document.querySelector("#add-modal");
-        const editModal = document.querySelector("#edit-modal");
-        const deleteModal = document.querySelector("#delete-modal");
-
-        const closeModal = document.querySelectorAll(".modal-close-js");
-        const modalContent = document.querySelectorAll(".body-content");
-
-        function showAddModal() {
-            addModal.classList.add("active");
-        }
-
-        function showEditModal() {
-            editModal.classList.add("active");
-        }
-
-        function showDeleteModal() {
-            deleteModal.classList.add("active");
-        }
-
-        function removeModal() {
-            addModal.classList.remove("active");
-            editModal.classList.remove("active");
-            deleteModal.classList.remove("active");
-        }
-
-        function clickOutToClose(e) {
-            e.stopPropagation();
-        }
-
-        addLibra.addEventListener("click", showAddModal);
-
-        for(const editLibra of editLibras){
-            editLibra.addEventListener("click", showEditModal);
-        }
-
-        for(const deleteLibra of deleteLibras){
-            deleteLibra.addEventListener("click", showDeleteModal);
-        }
-
-        for (const closeBtn of closeModal) {
-            closeBtn.addEventListener("click", removeModal);
-        }
-
-        addModal.addEventListener("click", removeModal);
-        editModal.addEventListener("click", removeModal);
-        deleteModal.addEventListener("click", removeModal);
-
-        for (const content of modalContent) {
-            content.addEventListener("click", clickOutToClose);
-        }
-
+    <script src="./asset/js/admin.js">
     </script>
 </body>
 

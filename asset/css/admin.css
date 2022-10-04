@@ -155,7 +155,6 @@
 .edit-btn,
 .delete-btn {
     padding: 4px;
-    margin: 0 6px;
 }
 
 .edit-btn:hover,
@@ -217,7 +216,7 @@
 .add-title,
 .edit-title{
     background-color: #bbb;
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 600;
     text-align: center;
     padding: 20px 30px 20px;
