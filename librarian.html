@@ -18,7 +18,7 @@
     <div id="main">
         <div id="header">
             <div class="nav-bar">
-                <!-- Logo -->   
+                <!-- Logo -->
                 <div class="nav-bar__logo">
                     eLibrary
                 </div>
@@ -35,19 +35,32 @@
                         BOOKS
                     </li>
                 </ul>
-                <button class="logout-btn">Logout</button>
+
+                <!-- Logout -->
+                <form action="logout" class="logout">
+                    <button class="logout-btn" name="logout">Logout</button>
+                </form>
             </div>
         </div>
 
         <div id="body">
+
             <!-- Reader -->
             <div class="reader-content reader-content-js active">
+                <!-- Search -->
+                <form action="searchReader" class="search">
+                    <input class="search__inp" type="search" placeholder="Search reader" name="searchReader">
+                    <button class="search-btn">
+                        <i  class="search__icon ti-search"></i>
+                    </button>
+                </form>
+
                 <!-- Add reader -->
                 <div class="add">
                     <button class="add-btn btn reader-add-js">+ Add reader</button>
                 </div>
 
-                <!-- Show list of reader -->
+                <!-- Show list of readers -->
                 <div class="table">
                     <table class="reader-list">
                         <tr class="reader-list__item">
@@ -108,18 +121,58 @@
                             </td>
                         </tr>
 
+                        <tr class="reader-list__item">
+                            <td class="reader-list__value">1</td>
+                            <td class="reader-list__value">RD001</td>
+                            <td class="reader-list__value">Do Duy Kien</td>
+                            <td class="reader-list__value">19/12/2002</td>
+                            <td class="reader-list__value">0963448172</td>
+                            <td class="reader-list__value">EB001</td>
+                            <td class="reader-list__value">15/12</td>
+                            <td class="reader-list__value">19/12</td>
+                            <td class="reader-item__function">
+                                <i class="return-btn fa-solid fa-rotate-left return-js"></i>
+                                <i class="edit-btn fa-solid fa-pen reader-edit-js"></i>
+                                <i class="delete-btn fa-solid fa-trash reader-delete-js"></i>
+                            </td>
+                        </tr>
+
+                        <tr class="reader-list__item">
+                            <td class="reader-list__value">1</td>
+                            <td class="reader-list__value">RD001</td>
+                            <td class="reader-list__value">Do Duy Kien</td>
+                            <td class="reader-list__value">19/12/2002</td>
+                            <td class="reader-list__value">0963448172</td>
+                            <td class="reader-list__value">EB001</td>
+                            <td class="reader-list__value">15/12</td>
+                            <td class="reader-list__value">19/12</td>
+                            <td class="reader-item__function">
+                                <i class="return-btn fa-solid fa-rotate-left return-js"></i>
+                                <i class="edit-btn fa-solid fa-pen reader-edit-js"></i>
+                                <i class="delete-btn fa-solid fa-trash reader-delete-js"></i>
+                            </td>
+                        </tr>
+
                     </table>
                 </div>
             </div>
 
             <!-- Books -->
             <div class="books-content books-content-js">
-                <!-- Add reader -->
+                <!-- Search -->
+                <form action="searchBook" class="search">
+                    <input class="search__inp" type="search" placeholder="Search book" name="searchBook">
+                    <button class="search-btn">
+                        <i  class="search__icon ti-search"></i>
+                    </button>
+                </form>
+
+                <!-- Add books -->
                 <div class="add">
                     <button class="add-btn btn books-add-js">+ Add books</button>
                 </div>
 
-                <!-- Show list of reader -->
+                <!-- Show list of books -->
                 <div class="table">
                     <table class="books-list">
                         <tr class="books-list__item">
@@ -174,7 +227,7 @@
 
     <!-- Add modal -->
     <div class="add-modal reader-add-modal">
-        <form class="body-content">
+        <form class="body-content" action="addReader">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -191,7 +244,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="text" placeholder="Eg. Nguyen Van A">
+                        <input class="info--inp" type="text" placeholder="Eg. Nguyen Van A" name="addReaderName">
                         <!-- <span class="info--notice">Please enter your full name</span> -->
                     </div>
                 </li>
@@ -202,7 +255,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="date" placeholder="Eg. 01/01/2002">
+                        <input class="info--inp" type="date" placeholder="Eg. 01/01/2002" name="addReaderDob">
                         <!-- <span class="info--notice">Please enter your date of birth</span> -->
                     </div>
                 </li>
@@ -213,7 +266,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="tel" placeholder="Eg. 0918581223">
+                        <input class="info--inp" type="tel" placeholder="Eg. 0918581223" name="addReaderPhone">
                         <!-- <span class="info--notice">Please enter your phone number</span> -->
                     </div>
                 </li>
@@ -223,14 +276,14 @@
                 <!-- The librarian has existed -->
             </span>
 
-            <Button class="add-modal-btn btn">ADD</Button>
+            <Button class="add-modal-btn btn" name="readerAddBtn">ADD</Button>
 
         </form>
     </div>
 
     <!-- Edit modal -->
     <div class="edit-modal reader-edit-modal">
-        <form class="body-content">
+        <form class="body-content" action="editReader">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -248,7 +301,7 @@
                     </div>
                     <div class="info__item--inp">
                         <input class="info--inp" required type="text" placeholder="Eg. Nguyen Van A"
-                            value="Do Duy Kien">
+                            value="Do Duy Kien" name="editReaderName">
                         <!-- <span class="info--notice">Please enter your full name</span> -->
                     </div>
                 </li>
@@ -259,7 +312,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" required type="text" placeholder="Eg. 01/01/2002" value="19/12/2002">
+                        <input class="info--inp" required type="text" placeholder="Eg. 01/01/2002" value="19/12/2002" name="editReaderDob">
                         <!-- <span class="info--notice">Please enter your date of birth</span> -->
                     </div>
                 </li>
@@ -270,20 +323,20 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" required type="tel" placeholder="Eg. 0918581223" value="0963448172">
+                        <input class="info--inp" required type="tel" placeholder="Eg. 0918581223" value="0963448172" name="editReaderPhone">
                         <!-- <span class="info--notice">Please enter your phone number</span> -->
                     </div>
                 </li>
             </ul>
 
-            <Button class="edit-modal-btn btn">UPDATE</Button>
+            <Button class="edit-modal-btn btn" name="readerEditBtn">UPDATE</Button>
 
         </form>
     </div>
 
     <!-- Delete modal -->
     <div class="delete-modal reader-delete-modal">
-        <form class="body-content">
+        <form class="body-content" action="delReader">
             <!-- Modal close -->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -298,7 +351,7 @@
 
     <!-- Return modal -->
     <div class="return-modal">
-        <form class="body-content">
+        <form class="body-content" action="returnBooks">
             <!-- Modal close -->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -323,7 +376,7 @@
 
     <!-- Add modal -->
     <div class="add-modal books-add-modal">
-        <form class="body-content">
+        <form class="body-content" action="addBook">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -371,7 +424,7 @@
 
     <!-- Edit modal -->
     <div class="edit-modal books-edit-modal">
-        <form class="body-content">
+        <form class="body-content" action="editBook">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>

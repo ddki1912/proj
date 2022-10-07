@@ -46,7 +46,7 @@
 
     <!-- Login Modal -->
     <div class="login-modal js-modal">
-        <form class="login-modal__content js-modal-content">
+        <form class="login-modal__content js-modal-content" action="login">
             <div class="login-modal__close js-modal-close">
                 <i class="modal-close ti-close "></i>
             </div>
@@ -54,12 +54,12 @@
                 <span class="login-modal__header--logo">eLibrary</span>
                 <span class="login-modal__header--title js-modal-title">Login</span>
             </div>
-            <div class="login-modal__body">
+            <div class="login-modal__body"> 
                 <label class="login-modal__acc--title" for="account">Account</label>
-                <input class="login-modal__acc--inp" type="text" placeholder="Your ID" name="account">
+                <input class="login-modal__acc--inp" type="text" placeholder="Your ID" name="user">
                 <label class="login-modal__password--title" for="password">Password</label>
                 <input class="login-modal__password--inp" type="password" placeholder="Your Password" name="password">
-                <button class="login-btn btn" role="button">Login</button>
+                <button class="login-btn btn" role="button" name="loginBtn">Login</button>
             </div>
         </form>
     </div>

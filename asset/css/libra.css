@@ -58,18 +58,22 @@
 
 /* Logout */
 
+.logout{
+    width: 10%;
+    margin-left: auto;
+    text-align: center;
+}
+
 .logout-btn {
-    background-color: #fff;
+    background-color: var(--white-color);
     color: #000;
     font-size: 1.8rem;
     font-weight: 500;
-    width: 10%;
+    width: 100%;
     height: 100%;
     border: 2px solid #000;
     border-radius: 4px;
     text-decoration: none;
-    text-align: center;
-    margin-left: auto;
 }
 
 .logout-btn:hover {
@@ -103,6 +107,50 @@
     display: block;
 }
 
+/* Search */
+
+.search{
+    width: 100%;
+    height: 50px;
+    padding: 5px 30px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.search__inp {
+    width: 70%;
+    font-size: 1.6rem;
+    height: 100%;
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.search-btn{
+    background-color: beige;
+    border: none;
+    margin-left: 2px;
+    transform: translateY(0.5px);
+}
+
+.search__icon {
+    background-color: var(--btn-color);
+    font-size: 1.85rem;
+    height: 100%;
+    color: var(--white-color);
+    padding: 10px 20px 11px;
+    border-radius: 3px;
+    text-align: center;
+    
+}
+
+.search__icon:hover {
+    cursor: pointer;
+    background-color: var(--btn-hover-color);
+}
+
+/* Add */
+
 .add {
     position: relative;
     width: 100%;
@@ -119,10 +167,11 @@
     margin-right: 30px;
 }
 
+/* List */
+
 .table {
     padding: 20px 30px;
     margin-bottom: 30px;
-    /* overflow: scroll; */
 }
 
 .reader-list,
