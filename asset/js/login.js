@@ -17,13 +17,10 @@ function closeLogin() {
 
 admin.onclick = function () {
     loginTitle.innerHTML = "Admin Login";
-    loginBtn.setAttribute("href", "http://127.0.0.1:5500/admin.html");
-
 }
 
 libra.onclick = function () {
     loginTitle.innerHTML = "Librarian Login";
-    loginBtn.setAttribute("href", "http://127.0.0.1:5500/librarian.html");
 }
 
 for (const login of loginForm) {

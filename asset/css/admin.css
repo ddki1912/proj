@@ -71,13 +71,12 @@
     font-size: 1.8rem;
     font-weight: 500;
     width: 10%;
-    height: 99%;
+    height: 100%;
     border: 2px solid #000;
     border-radius: 4px;
     text-decoration: none;
     text-align: center;
     margin-left: auto;
-    padding-top: 11px;
 }
 
 .logout-btn:hover {
