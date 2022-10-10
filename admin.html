@@ -24,18 +24,18 @@
                 </div>
 
                 <!-- Search -->
-                <form id="search" action="searchLibra">
+                <form id="search" action="SearchLibrarian">
                     <input class="search__inp" type="search" placeholder="Search librarian" name="searchLibra">
                     <button class="search-btn">
-                        <i  class="search__icon ti-search"></i>
+                        <i class="search__icon ti-search"></i>
                     </button>
                 </form>
 
                 <!-- Logout -->
-                <form action="logout" class="logout">
+                <form action="Logout" class="logout">
                     <button class="logout-btn" name="logout">Logout</button>
                 </form>
-                
+
             </div>
         </div>
 
@@ -99,7 +99,7 @@
 
     <!-- Add modal -->
     <div id="add-modal">
-        <form class="body-content" action="addLibra">
+        <form class="body-content" action="AddLibrarian">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -116,7 +116,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="text" placeholder="Eg. Nguyen Van A" name="addLibraName">
+                        <input class="info--inp" type="text" placeholder="Eg. Nguyen Van A" name="libraName">
                         <!-- <span class="info--notice">Please enter your full name</span> -->
                     </div>
                 </li>
@@ -127,7 +127,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="date" placeholder="Eg. 01/01/2002" name="addLibraDob">
+                        <input class="info--inp" type="date" placeholder="Eg. 01/01/2002" name="libraDob">
                         <!-- <span class="info--notice">Please enter your date of birth</span> -->
                     </div>
                 </li>
@@ -135,7 +135,7 @@
                 <li class="info__item">
                     <div class="info__item--title">Email</div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="email" placeholder="Eg. abc123@gmail.com" name="addLibraEmail">
+                        <input class="info--inp" type="email" placeholder="Eg. abc123@gmail.com" name="libraEmail">
                     </div>
                 </li>
 
@@ -145,7 +145,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="tel" placeholder="Eg. 0918581223" name="addLibraPhone">
+                        <input class="info--inp" type="tel" placeholder="Eg. 0918581223" name="libraPhone">
                         <!-- <span class="info--notice">Please enter your phone number</span> -->
                     </div>
                 </li>
@@ -162,7 +162,7 @@
 
     <!-- Edit modal -->
     <div id="edit-modal">
-        <form class="body-content" action="editLibra">
+        <form class="body-content" action="EditLibrarian">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -179,8 +179,8 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" required type="text" placeholder="Eg. Nguyen Van A"
-                            value="Do Duy Kien" name="editLibraName">
+                        <input class="info--inp" required type="text" placeholder="Eg. Nguyen Van A" value="Do Duy Kien"
+                            name="libraName">
                         <!-- <span class="info--notice">Please enter your full name</span> -->
                     </div>
                 </li>
@@ -191,7 +191,8 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" required type="text" placeholder="Eg. 01/01/2002" value="19/12/2002" name="editLibraDob">
+                        <input class="info--inp" required type="text" placeholder="Eg. 01/01/2002" value="19/12/2002"
+                            name="libraDob">
                         <!-- <span class="info--notice">Please enter your date of birth</span> -->
                     </div>
                 </li>
@@ -200,7 +201,7 @@
                     <div class="info__item--title" for="Email">Email</div>
                     <div class="info__item--inp">
                         <input class="info--inp" type="email" placeholder="Eg. abc123@gmail.com"
-                            value="ddkien1912@gmail.com" name="editLibraEmail">
+                            value="ddkien1912@gmail.com" name="libraEmail">
                     </div>
                 </li>
 
@@ -210,7 +211,8 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" required type="tel" placeholder="Eg. 0918581223" value="0963448172" name="editLibraPhone">
+                        <input class="info--inp" required type="tel" placeholder="Eg. 0918581223" value="0963448172"
+                            name="libraPhone">
                         <!-- <span class="info--notice">Please enter your phone number</span> -->
                     </div>
                 </li>
@@ -223,12 +225,13 @@
 
     <!-- Delete modal -->
     <div id="delete-modal">
-        <form class="body-content" action="delLibra">
+        <form class="body-content" action="DeleteLibrarian">
             <!-- Modal close -->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
             </div>
             <div class="delete__quest">Are you sure that you want to delete this librarian?</div>
+            <!-- <form action=""></form> -->
             <div class="delete__answer">
                 <button class="yes-btn btn" name="libraYesbtn">YES</button>
                 <button class="no-btn btn" name="libraNoBtn">NO</button>

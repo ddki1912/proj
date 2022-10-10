@@ -45,7 +45,7 @@
     border: none;
 }
 
-.search-btn{
+.search-btn {
     border-radius: 4px;
     height: 40px;
     border: none;
@@ -69,7 +69,7 @@
 
 /* Logout */
 
-.logout{
+.logout {
     width: 10%;
     margin-left: auto;
     text-align: center;
@@ -149,14 +149,14 @@
 
 .libra-list__heading {
     text-align: center;
-    padding: 8px 16px;
+    padding: 8px 10px;
 }
 
 .libra-list__value,
 .libra-item__function {
     width: fit-content;
     text-align: center;
-    padding: 8px 16px;
+    padding: 4px 8px;
 }
 
 .edit-btn,
@@ -174,7 +174,7 @@
 
 #add-modal,
 #edit-modal,
-#delete-modal{
+#delete-modal {
     display: none;
     align-items: center;
     justify-content: center;
@@ -187,9 +187,9 @@
     background: rgba(51, 51, 51, 0.6);
 }
 
-#add-modal.active, 
+#add-modal.active,
 #edit-modal.active,
-#delete-modal.active{
+#delete-modal.active {
     display: flex;
 }
 
@@ -205,7 +205,7 @@
     margin-top: 50px;
 }
 
-.modal-close{
+.modal-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -214,14 +214,14 @@
     padding: 0.6rem;
 }
 
-.modal-close:hover{
+.modal-close:hover {
     cursor: pointer;
     color: var(--white-color);
     background-color: red;
 }
 
 .add-title,
-.edit-title{
+.edit-title {
     background-color: #bbb;
     font-size: 3rem;
     font-weight: 600;
@@ -255,7 +255,7 @@
     height: 45px;
 }
 
-.info--inp{
+.info--inp {
     width: 100%;
     font-size: 1.6rem;
     padding: 6px 6px;
@@ -263,7 +263,7 @@
     border-radius: 3px;
 }
 
-.info--notice{
+.info--notice {
     margin-top: 5px;
     font-size: 1.4rem;
     font-weight: 500;
@@ -271,7 +271,7 @@
     opacity: 0.8;
 }
 
-.add-notice{
+.add-notice {
     display: none;
     color: red;
     line-height: 15px;
@@ -280,35 +280,35 @@
     padding: 0px 30px 10px;
 }
 
-.add-notice.active{
+.add-notice.active {
     display: block;
 }
 
 .add-modal-btn,
-.edit-modal-btn{
+.edit-modal-btn {
     font-size: 2rem;
     padding: 8px 12px;
     margin: 10px 0 30px;
 }
 
 /* Delete-modal */
-#delete-modal .body-content{
+#delete-modal .body-content {
     margin-top: 0;
 }
 
-.delete__quest{
+.delete__quest {
     background-color: #bbb;
     font-size: 2.2rem;
     text-align: center;
     padding: 20px 30px;
 }
 
-.delete__answer{
+.delete__answer {
     display: block;
     padding: 20px 30px;
 }
 
-.delete__answer .btn{
+.delete__answer .btn {
     font-size: 2.2rem;
     padding: 8px 14px;
     margin: 0 15px;

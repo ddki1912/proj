@@ -17,10 +17,12 @@ function closeLogin() {
 
 admin.onclick = function () {
     loginTitle.innerHTML = "Admin Login";
+    loginModalContent.setAttribute("action", "AdminLogin");
 }
 
 libra.onclick = function () {
     loginTitle.innerHTML = "Librarian Login";
+    loginModalContent.setAttribute("action", "LibrarianLogin");
 }
 
 for (const login of loginForm) {

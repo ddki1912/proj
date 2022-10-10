@@ -71,10 +71,10 @@
     display: flex;
 }
 
-.login-modal .login-modal__content {
+.login-modal__content {
     display: flex;
     background-color: var(--white-color);
-    height: 70%;
+    height: fit-content;
     width: 40%;
     flex-direction: column;
     align-items: center;
@@ -84,7 +84,7 @@
     animation: showModal ease 0.5s;
 }
 
-.login-modal .modal-close {
+.modal-close {
     display: block;
     padding: 0.5rem;
     font-size: 2.2rem;
@@ -94,31 +94,31 @@
     color: rgba(0, 0, 0, 0.6);
 }
 
-.login-modal .modal-close:hover {
+.modal-close:hover {
     cursor: pointer;
     color: #fff;
     background-color: red;
 }
 
-.login-modal__content .login-modal__header {
+.login-modal__header {
     width: 100%;
     display: flex;
     margin: 4rem 0 6rem;
 }
 
-.login-modal__header .login-modal__header--logo {
+.login-modal__header--logo {
     font-size: 3rem;
     font-weight: 700;
     margin: 0 auto 0 2.8rem;
 }
 
-.login-modal__header .login-modal__header--title {
+.login-modal__header--title {
     font-size: 2.8rem;
     font-weight: 400;
     margin: 0 2.8rem 0 auto;
 }
 
-.login-modal__content .login-modal__body {
+.login-modal__body {
     display: flex;
     width: 100%;
     height: 100%;
@@ -143,14 +143,14 @@
     border-radius: 4px;
 }
 
-.login-modal__body .login-btn {
+.login-btn {
     font-size: 2rem;
-    margin: auto auto 3.2rem auto;
+    margin: 3rem auto 3.2rem auto;
     line-height: 3rem;
-    padding: 0.3rem 1.4rem 0.5rem 1.4rem;
+    padding: 0.3rem 1.4rem 0.5rem;
 }
 
-.login-modal__body .login-btn:hover {
+.login-btn:hover {
     cursor: pointer;
     background-color: var(--btn-hover-color);
 }

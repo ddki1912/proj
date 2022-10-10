@@ -33,22 +33,21 @@ books.addEventListener("click", removeReaderList);
 const readerAdd = document.querySelector(".reader-add-js");
 const readerEdit = document.querySelectorAll(".reader-edit-js");
 const readerDel = document.querySelectorAll(".reader-delete-js");
-const returnBtn = document.querySelectorAll(".return-js");
-
+const borrowBtn = document.querySelectorAll(".borrow-js");
+const returnBtn = document.querySelectorAll(".return-btn");
 const readerAddModal = document.querySelector(".reader-add-modal");
 const readerEditModal = document.querySelector(".reader-edit-modal");
 const readerDelModal = document.querySelector(".reader-delete-modal");
+const borrowModal = document.querySelector(".borrow-modal");
 const returnModal = document.querySelector(".return-modal");
 
 const booksAdd = document.querySelector(".books-add-js");
 const booksEdit = document.querySelectorAll(".books-edit-js");
-
 const booksAddModal = document.querySelector(".books-add-modal");
 const booksEditModal = document.querySelector(".books-edit-modal");
 
 const closeModal = document.querySelectorAll(".modal-close-js");
 const modalContent = document.querySelectorAll(".body-content");
-
 
 
 function showAddReaderModal() {
@@ -60,6 +59,10 @@ function showEditReaderModal() {
 
 function showDelReaderModal() {
     readerDelModal.classList.add(active);
+}
+
+function showBorrowModal() {
+    borrowModal.classList.add(active);
 }
 
 function showReturnModal() {
@@ -78,6 +81,7 @@ function removeModal() {
     readerAddModal.classList.remove(active);
     readerEditModal.classList.remove(active);
     readerDelModal.classList.remove(active);
+    borrowModal.classList.remove(active);
     returnModal.classList.remove(active);
     booksAddModal.classList.remove(active);
     booksEditModal.classList.remove(active);
@@ -97,6 +101,10 @@ for (const del of readerDel) {
     del.addEventListener("click", showDelReaderModal);
 }
 
+for (const borrow of borrowBtn) {
+    borrow.addEventListener("click", showBorrowModal);
+}
+
 for (const ret of returnBtn) {
     ret.addEventListener("click", showReturnModal);
 }
@@ -114,6 +122,7 @@ for (const modal of closeModal) {
 readerAddModal.addEventListener("click", removeModal);
 readerEditModal.addEventListener("click", removeModal);
 readerDelModal.addEventListener("click", removeModal);
+borrowModal.addEventListener("click", removeModal);
 returnModal.addEventListener("click", removeModal);
 booksAddModal.addEventListener("click", removeModal);
 booksEditModal.addEventListener("click", removeModal);
@@ -121,10 +130,3 @@ booksEditModal.addEventListener("click", removeModal);
 for (const content of modalContent) {
     content.addEventListener("click", clickOutToClose);
 }
-
-
-
-
-
-
-

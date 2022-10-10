@@ -27,7 +27,7 @@
                 <ul class="nav-bar__list">
                     <!-- Reader -->
                     <li class="nav-bar__item reader-js active">
-                        READER
+                        READERS
                     </li>
 
                     <!-- Books -->
@@ -37,7 +37,7 @@
                 </ul>
 
                 <!-- Logout -->
-                <form action="logout" class="logout">
+                <form action="Logout" class="logout">
                     <button class="logout-btn" name="logout">Logout</button>
                 </form>
             </div>
@@ -48,10 +48,10 @@
             <!-- Reader -->
             <div class="reader-content reader-content-js active">
                 <!-- Search -->
-                <form action="searchReader" class="search">
+                <form action="SearchReader" class="search">
                     <input class="search__inp" type="search" placeholder="Search reader" name="searchReader">
                     <button class="search-btn">
-                        <i  class="search__icon ti-search"></i>
+                        <i class="search__icon ti-search"></i>
                     </button>
                 </form>
 
@@ -74,7 +74,7 @@
                             <th class="reader-list__heading">Phone</th>
                             <th class="reader-list__heading">Books ID</th>
                             <th class="reader-list__heading">Borrow on</th>
-                            <th class="reader-list__heading">Return on</th>
+                            <th class="reader-list__heading">Return status</th>
                         </tr>
 
                         <tr class="reader-list__item">
@@ -84,9 +84,10 @@
                             <td class="reader-list__value">19/12/2002</td>
                             <td class="reader-list__value">0963448172</td>
                             <td class="reader-list__value">EB001</td>
-                            <td class="reader-list__value">15/12</td>
-                            <td class="reader-list__value">19/12</td>
+                            <td class="reader-list__value">15/12/2021</td>
+                            <td class="reader-list__value">Returned</td>
                             <td class="reader-item__function">
+                                <i class="borrow-btn fa-solid fa-book borrow-js"></i>
                                 <i class="return-btn fa-solid fa-rotate-left return-js"></i>
                                 <i class="edit-btn fa-solid fa-pen reader-edit-js"></i>
                                 <i class="delete-btn fa-solid fa-trash reader-delete-js"></i>
@@ -99,22 +100,11 @@
                             <td class="reader-list__value">Do Ha An</td>
                             <td class="reader-list__value">19/12/2002</td>
                             <td class="reader-list__value">0963448172</td>
-                            <td class="reader-list__value">
-                                EB001
-                                <br>
-                                EB002
-                            </td>
-                            <td class="reader-list__value">
-                                17/12
-                                <br>
-                                18/12
-                            </td>
-                            <td class="reader-list__value">
-                                19/12
-                                <br>
-                                20/12
-                            </td>
+                            <td class="reader-list__value">EB001</td>
+                            <td class="reader-list__value">17/12/2021</td>
+                            <td class="reader-list__value">Returned</td>
                             <td class="reader-item__function">
+                                <i class="borrow-btn fa-solid fa-book borrow-js"></i>
                                 <i class="return-btn fa-solid fa-rotate-left return-js"></i>
                                 <i class="edit-btn fa-solid fa-pen reader-edit-js"></i>
                                 <i class="delete-btn fa-solid fa-trash reader-delete-js"></i>
@@ -128,9 +118,10 @@
                             <td class="reader-list__value">19/12/2002</td>
                             <td class="reader-list__value">0963448172</td>
                             <td class="reader-list__value">EB001</td>
-                            <td class="reader-list__value">15/12</td>
-                            <td class="reader-list__value">19/12</td>
+                            <td class="reader-list__value">15/12/2021</td>
+                            <td class="reader-list__value">Returned</td>
                             <td class="reader-item__function">
+                                <i class="borrow-btn fa-solid fa-book borrow-js"></i>
                                 <i class="return-btn fa-solid fa-rotate-left return-js"></i>
                                 <i class="edit-btn fa-solid fa-pen reader-edit-js"></i>
                                 <i class="delete-btn fa-solid fa-trash reader-delete-js"></i>
@@ -144,9 +135,10 @@
                             <td class="reader-list__value">19/12/2002</td>
                             <td class="reader-list__value">0963448172</td>
                             <td class="reader-list__value">EB001</td>
-                            <td class="reader-list__value">15/12</td>
-                            <td class="reader-list__value">19/12</td>
+                            <td class="reader-list__value">15/12/2021</td>
+                            <td class="reader-list__value">Returned</td>
                             <td class="reader-item__function">
+                                <i class="borrow-btn fa-solid fa-book borrow-js"></i>
                                 <i class="return-btn fa-solid fa-rotate-left return-js"></i>
                                 <i class="edit-btn fa-solid fa-pen reader-edit-js"></i>
                                 <i class="delete-btn fa-solid fa-trash reader-delete-js"></i>
@@ -160,32 +152,32 @@
             <!-- Books -->
             <div class="books-content books-content-js">
                 <!-- Search -->
-                <form action="searchBook" class="search">
+                <form action="SearchBook" class="search">
                     <input class="search__inp" type="search" placeholder="Search book" name="searchBook">
                     <button class="search-btn">
-                        <i  class="search__icon ti-search"></i>
+                        <i class="search__icon ti-search"></i>
                     </button>
                 </form>
 
                 <!-- Add books -->
                 <div class="add">
-                    <button class="add-btn btn books-add-js">+ Add books</button>
+                    <button class="add-btn btn books-add-js">+ Add book</button>
                 </div>
 
                 <!-- Show list of books -->
                 <div class="table">
                     <table class="books-list">
                         <tr class="books-list__item">
-                            <th class="books-list__title" colspan="9">Books' Information</th>
+                            <th class="books-list__title" colspan="8">Books' Information</th>
                         </tr>
                         <tr class="books-list__item">
                             <th class="books-list__heading">No</th>
                             <th class="books-list__heading">ID</th>
-                            <th class="books-list__heading">Name of books</th>
+                            <th class="books-list__heading">Name of book</th>
                             <th class="books-list__heading">Author</th>
                             <th class="books-list__heading">Quantity</th>
                             <th class="books-list__heading">Borrowed</th>
-                            <th class="books-list__heading">Remain</th>
+                            <th class="books-list__heading">Borrow by</th>
                         </tr>
 
                         <tr class="books-list__item">
@@ -195,7 +187,11 @@
                             <td class="books-list__value">J.K.Rowling</td>
                             <td class="books-list__value">10</td>
                             <td class="books-list__value">2</td>
-                            <td class="books-list__value">8</td>
+                            <td class="books-list__value">
+                                Do Duy Kien
+                                <br>
+                                Do Duy Kien
+                            </td>
                             <td class="books-item__function">
                                 <i class="edit-btn fa-solid fa-pen books-edit-js"></i>
                             </td>
@@ -208,7 +204,11 @@
                             <td class="books-list__value">J.K.Rowling</td>
                             <td class="books-list__value">10</td>
                             <td class="books-list__value">2</td>
-                            <td class="books-list__value">8</td>
+                            <td class="books-list__value">
+                                Do Duy Kien
+                                <br>
+                                Do Duy Kien
+                            </td>
                             <td class="books-item__function">
                                 <i class="edit-btn fa-solid fa-pen books-edit-js"></i>
                             </td>
@@ -227,7 +227,7 @@
 
     <!-- Add modal -->
     <div class="add-modal reader-add-modal">
-        <form class="body-content" action="addReader">
+        <form class="body-content" action="AddReader">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -244,7 +244,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="text" placeholder="Eg. Nguyen Van A" name="addReaderName">
+                        <input class="info--inp" type="text" placeholder="Eg. Nguyen Van A" name="readerName">
                         <!-- <span class="info--notice">Please enter your full name</span> -->
                     </div>
                 </li>
@@ -255,7 +255,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="date" placeholder="Eg. 01/01/2002" name="addReaderDob">
+                        <input class="info--inp" type="date" placeholder="Eg. 01/01/2002" name="readerDob">
                         <!-- <span class="info--notice">Please enter your date of birth</span> -->
                     </div>
                 </li>
@@ -266,7 +266,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="tel" placeholder="Eg. 0918581223" name="addReaderPhone">
+                        <input class="info--inp" type="tel" placeholder="Eg. 0918581223" name="readerPhone">
                         <!-- <span class="info--notice">Please enter your phone number</span> -->
                     </div>
                 </li>
@@ -283,7 +283,7 @@
 
     <!-- Edit modal -->
     <div class="edit-modal reader-edit-modal">
-        <form class="body-content" action="editReader">
+        <form class="body-content" action="EditReader">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -300,8 +300,8 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" required type="text" placeholder="Eg. Nguyen Van A"
-                            value="Do Duy Kien" name="editReaderName">
+                        <input class="info--inp" required type="text" placeholder="Eg. Nguyen Van A" value="Do Duy Kien"
+                            name="readerName">
                         <!-- <span class="info--notice">Please enter your full name</span> -->
                     </div>
                 </li>
@@ -312,7 +312,8 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" required type="text" placeholder="Eg. 01/01/2002" value="19/12/2002" name="editReaderDob">
+                        <input class="info--inp" required type="text" placeholder="Eg. 01/01/2002" value="19/12/2002"
+                            name="readerDob">
                         <!-- <span class="info--notice">Please enter your date of birth</span> -->
                     </div>
                 </li>
@@ -323,7 +324,8 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" required type="tel" placeholder="Eg. 0918581223" value="0963448172" name="editReaderPhone">
+                        <input class="info--inp" required type="tel" placeholder="Eg. 0918581223" value="0963448172"
+                            name="readerPhone">
                         <!-- <span class="info--notice">Please enter your phone number</span> -->
                     </div>
                 </li>
@@ -336,12 +338,13 @@
 
     <!-- Delete modal -->
     <div class="delete-modal reader-delete-modal">
-        <form class="body-content" action="delReader">
+        <form class="body-content" action="DeleteReader">
             <!-- Modal close -->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
             </div>
             <div class="delete__quest">Are you sure that you want to delete this reader?</div>
+            <!-- <form action=""></form> -->
             <div class="delete__answer">
                 <button class="yes-btn btn">YES</button>
                 <button class="no-btn btn">NO</button>
@@ -349,26 +352,45 @@
         </form>
     </div>
 
-    <!-- Return modal -->
-    <div class="return-modal">
-        <form class="body-content" action="returnBooks">
+    <!-- Borrow modal -->
+    <div class="borrow-modal">
+        <form class="body-content" action="BorrowBook">
             <!-- Modal close -->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
             </div>
             <!-- Add-title -->
-            <div class="return-title">Return Books</div>
+            <div class="borrow-title">Borrow Book</div>
+
+            <!-- Form to fill in -->
+            <div class="borrow-info">
+                <span class="borrow-info__label">Books' ID: </span>
+                <input class="borrow-info__inp" required type="text" placeholder="Eg. EB001" name="bookId">
+            </div>
+
+            <Button class="borrow-modal-btn btn">BORROW</Button>
+        </form>
+    </div>
+
+    <!-- Return modal -->
+    <div class="return-modal">
+        <form class="body-content" action="ReturnBook">
+            <!-- Modal close -->
+            <div class="modal-close modal-close-js">
+                <i class="ti-close"></i>
+            </div>
+            <!-- Add-title -->
+            <div class="return-title">Return Book</div>
 
             <!-- Form to fill in -->
             <div class="return-info">
-                <span class="return-info__label">Books ID: </span>
-                <input class="return-info__inp" required type="text" placeholder="Eg. EB001" name="Books class">
+                <span class="return-info__label">Books' ID: </span>
+                <input class="return-info__inp" required type="text" placeholder="Eg. EB001" name="bookId">
             </div>
 
             <Button class="return-modal-btn btn">RETURN</Button>
         </form>
     </div>
-
 
     <!-- 
         BOOKS
@@ -376,7 +398,7 @@
 
     <!-- Add modal -->
     <div class="add-modal books-add-modal">
-        <form class="body-content" action="addBook">
+        <form class="body-content" action="AddBook">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -393,7 +415,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="text" placeholder="Eg. Harry Potter">
+                        <input class="info--inp" type="text" placeholder="Eg. Harry Potter" name="bookName">
                         <!-- <span class="info--notice">Please enter your phone number</span> -->
                     </div>
                 </li>
@@ -401,7 +423,7 @@
                 <li class="info__item">
                     <div class="info__item--title">Author</div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="text" placeholder="Eg. J.K.Rowling">
+                        <input class="info--inp" type="text" placeholder="Eg. J.K.Rowling" name="author">
                     </div>
                 </li>
 
@@ -411,7 +433,7 @@
                         <span class="info__item--vip">*</span>
                     </div>
                     <div class="info__item--inp">
-                        <input class="info--inp" type="number" placeholder="Eg. 10">
+                        <input class="info--inp" type="number" placeholder="Eg. 10" name="quantity">
                         <!-- <span class="info--notice">Please enter your phone number</span> -->
                     </div>
                 </li>
@@ -424,7 +446,7 @@
 
     <!-- Edit modal -->
     <div class="edit-modal books-edit-modal">
-        <form class="body-content" action="editBook">
+        <form class="body-content" action="EditBook">
             <!--Close btn-->
             <div class="modal-close modal-close-js">
                 <i class="ti-close"></i>
@@ -443,7 +465,7 @@
                     </div>
 
                     <div class="info__item--inp">
-                        <input class="info--inp" type="number" placeholder="Eg. 10" value="10">
+                        <input class="info--inp" type="number" placeholder="Eg. 10" value="10" name="quantity">
                     </div>
                 </li>
             </ul>

@@ -45,20 +45,20 @@
     padding: 0 2rem;
 }
 
-.nav-bar__item:hover{
+.nav-bar__item:hover {
     cursor: pointer;
     color: var(--black-color);
     background-color: var(--bg-color);
 }
 
-.nav-bar__item.active{
+.nav-bar__item.active {
     color: var(--black-color);
     background-color: var(--bg-color);
 }
 
 /* Logout */
 
-.logout{
+.logout {
     width: 10%;
     margin-left: auto;
     text-align: center;
@@ -103,13 +103,13 @@
 }
 
 .reader-content.active,
-.books-content.active{
+.books-content.active {
     display: block;
 }
 
 /* Search */
 
-.search{
+.search {
     width: 100%;
     height: 50px;
     padding: 5px 30px;
@@ -126,7 +126,7 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.search-btn{
+.search-btn {
     background-color: beige;
     border: none;
     margin-left: 2px;
@@ -141,7 +141,7 @@
     padding: 10px 20px 11px;
     border-radius: 3px;
     text-align: center;
-    
+
 }
 
 .search__icon:hover {
@@ -192,10 +192,9 @@
     padding: 10px 12px;
 }
 
-.reader-list__heading
-.books-list__heading {
+.reader-list__heading .books-list__heading {
     text-align: center;
-    padding: 8px 16px;
+    padding: 8px 10px;
 }
 
 .reader-list__value,
@@ -204,27 +203,31 @@
 .books-item__function {
     width: fit-content;
     text-align: center;
-    padding: 4px 10px;
+    padding: 4px 8px;
 }
 
+.borrow-btn,
 .return-btn,
 .edit-btn,
 .delete-btn {
     padding: 4px;
 }
 
+.borrow-btn:hover,
 .return-btn:hover,
 .edit-btn:hover,
 .delete-btn:hover {
     cursor: pointer;
 }
 
+
 /* Add-modal & Edit-modal */
 
 .add-modal,
 .edit-modal,
 .delete-modal,
-.return-modal{
+.borrow-modal,
+.return-modal {
     display: none;
     align-items: center;
     justify-content: center;
@@ -237,10 +240,11 @@
     background: rgba(51, 51, 51, 0.6);
 }
 
-.add-modal.active, 
+.add-modal.active,
 .edit-modal.active,
 .delete-modal.active,
-.return-modal.active{
+.borrow-modal.active,
+.return-modal.active {
     display: flex;
 }
 
@@ -256,7 +260,7 @@
     margin-top: 50px;
 }
 
-.modal-close{
+.modal-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -265,7 +269,7 @@
     padding: 0.6rem;
 }
 
-.modal-close:hover{
+.modal-close:hover {
     cursor: pointer;
     color: var(--white-color);
     background-color: red;
@@ -273,7 +277,8 @@
 
 .add-title,
 .edit-title,
-.return-title{
+.borrow-title,
+.return-title {
     background-color: #bbb;
     font-size: 3rem;
     font-weight: 600;
@@ -307,7 +312,7 @@
     height: 45px;
 }
 
-.info--inp{
+.info--inp {
     width: 100%;
     font-size: 1.6rem;
     padding: 6px 6px;
@@ -315,7 +320,7 @@
     border-radius: 3px;
 }
 
-.info--notice{
+.info--notice {
     margin-top: 5px;
     font-size: 1.4rem;
     font-weight: 500;
@@ -323,7 +328,7 @@
     opacity: 0.8;
 }
 
-.add-notice{
+.add-notice {
     display: none;
     color: red;
     line-height: 15px;
@@ -332,64 +337,70 @@
     padding: 0px 30px 10px;
 }
 
-.add-notice.active{
+.add-notice.active {
     display: block;
 }
 
 .add-modal-btn,
 .edit-modal-btn,
-.return-modal-btn{
+.borrow-modal-btn,
+.return-modal-btn {
     font-size: 2rem;
     padding: 8px 12px;
     margin: 10px 0 30px;
 }
 
 /* Delete-modal */
-.delete-modal .body-content{
+.delete-modal .body-content {
     margin-top: 0;
 }
 
-.delete__quest{
+.delete__quest {
     background-color: #bbb;
     font-size: 2.4rem;
     text-align: center;
     padding: 20px 30px;
 }
 
-.delete__answer{
+.delete__answer {
     display: block;
     padding: 20px 30px;
 }
 
-.delete__answer .btn{
+.delete__answer .btn {
     font-size: 2.2rem;
     padding: 8px 14px;
     margin: 0 15px;
 }
 
-/* Return modal */
+/* Borrow & Return modal */
 
-.return-modal .return-title{
+.borrow-modal .borrow-title,
+.return-modal .return-title {
     font-size: 2.4rem;
 }
 
-.return-info{
+.borrow-info,
+.return-info {
     padding: 20px 30px;
     text-align: center;
 }
 
-.return-info__label{
+.borrow-info__label,
+.return-info__label {
     font-size: 2rem;
     font-weight: 500;
 }
 
-.return-info__inp{
+.borrow-info__inp,
+.return-info__inp {
     font-size: 1.8rem;
     padding: 4px 8px;
     border: 1.5px solid rgba(0, 0, 0, 0.5);
     border-radius: 3px;
 }
 
-.return-modal .return-modal-btn{
+.borrow-modal .borrow-modal-btn,
+.return-modal .return-modal-btn {
     font-size: 2rem;
 }
